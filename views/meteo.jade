@@ -1,0 +1,17 @@
+//- template HTML de la météo avec les données ( object meteo)
+//- qu enous a envoyé la route weather res.render('meteo', { meteo });
+//- "meteo" est le nom du fichier "view" a retourner (meteo.jade)
+//- {meteo} est l'objet qui contient les informations a afficher
+h2= meteo.name
+div
+  div 
+    - meteo.weather.forEach(function(data) {
+        li= data.id
+        li= data.main
+        li= data.description
+        li= data.icon 
+    - })
+
+  h3= meteo.main.temp
+  h3= meteo.main.temp_min
+  h3= meteo.main.temp_max

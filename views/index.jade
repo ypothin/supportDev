@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+
+  //- ici la div que l'on a besoin pour accrocher les informations meteo 
+  //- quand on fait un fetch coté front pour avoir la météo
+  div#meteo
+
+  //- ici le lien vers la page météo avec les information de météo
+  //- ici c'est le routeur qui nous redirige vers la bonne page 
+  //- localhost:3030/weather
+  //- /weather est le nom de la route a appeler
+  a(href="/weather", target="_blank", rel="noopener noreferrer") afficher la page météo
